@@ -1,0 +1,48 @@
+Ejercicio1 
+Seguir los siguientes pasos:
+1.Crear una clase Persona con nombre, apellido1, apellido 2 y código.
+Prueba a crear un HashMap que use como clave Persona y como valor el tipo que quieras.
+Intenta insertar varias Personas entre ellos 2 que con exactamente el mismo contenido 
+¿Nos lo permite? ¿Por qué? (Recuerda la teoría de Sets, en este caso HashSet)
+Si fueran tipos primitivos como ya hemos visto en los ejemplos ¿Habría que ajustar algo?
+
+2.Necesitamos sobrecargar los siguientes dos métodos de 
+Persona para que no inserten valores repetidos en las claves del HashMap (recuerda que en realidad forman un HashSet):
+  boolean equals() 
+  int hashCode(Object o)
+
+3.Probar a añadir al menos 8 personas a un HashSet donde al menos 3 no se insertarán porque son elementos ya contenidos
+(no lo confundas con HashMap, aquí no hay parejas de valores)
+
+4.Recorrerlo con un foreach imprimiendo sus valores. Repite la operación con un iterador para ver si se da el mismo orden de impresión.
+
+5.Añade una persona al set e imprímelo para ver si se sigue dando el mismo orden. 
+
+6.Elimina una persona con un apellido1 concreto e imprime el set para ver si se sigue dando el mismo orden.
+
+7. Repetir los pasos 3, 4, 5 y 6 esta vez creando un LinkedHashSet. Compara resultados.
+
+8.Tratar de insertar varias personas en un TreeSet y recorrerlo. ¿Se puede? ¿Por qué?
+
+9.Hacer la clases Persona Comparable ordenando por apellido1, y si es igual ordenará por apellido 2. 
+
+10.Tratar nuevamente de insertar varias personas  (donde coincidan algunos valores) en el TreeSet y recorrerlo.
+
+11.Crea un par de comparadores (Comparator) y úsalos para ordenar el TreeSet por nombre y después por apellido1
+
+12.Repite estas comparaciones creando los comparadores con expresiones lambda dentro del constructor del TreeSet
+
+
+Ejercicio 2
+Reutiliza el ejercicio 6.2.
+Repite el ejercicio cambiando el HashMap por los dos otros tipos de mapa para comprobar la ordenación en la salida. ¿Los resultados son los esperados?
+Para hacer la última parte de ordenación que se pedía sigue las siguientes indicaciones:
+Puedes pensar inicialmente que la solución es un TreeMap  porque ordena por clave. Sin embargo, no resuelve este problema de mostrar un mapa ordenado por sus valores (no por las claves). 
+Podemos seguir usando un HashMap y ordenarlo SOLO a la hora de imprimirlo. 
+Para ello habría que obtener su EntrySet (que es lo que realmente vamos a imprimir) para ordenarlo, recuerda que es un conjunto de parejas o Entry<clave,valor>, es decir Set<Entry<clave, valor>>.
+Una vez obtenido el Set lo transformamos a una lista y la ordenamos con su metodo sort() pasándole como parámetro el Comparator de parejas Entry.
+
+Ejercicio 3
+-REPASA LO QUE YA HEMOS VISTO ANTERIORMENTE ANTES DE LOS SETS (ARRAYLIST Y HASHMAP)
+-INTENTA HACER EL EXAMEN PREVIO POR TI MISMO SIN CONSULTAR AYUDA
+-CON LO QUE YA HEMOS VISTO, BUSCA EJEMPLOS POR TI MISMO DE CASOS EN LOS QUE TENDRIAMOS QUE USAR UNA COLECCION U OTRA.
